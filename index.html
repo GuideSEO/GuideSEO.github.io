@@ -1,0 +1,750 @@
+﻿<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>SEO</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	text-indent: -1.7em;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+}
+
+.simple-table-header {
+	background: rgb(247, 246, 243);
+	color: black;
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(145, 145, 142, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(187, 132, 108, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(215, 129, 58, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 148, 51, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(108, 155, 125, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(91, 151, 189, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(167, 130, 195, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(205, 116, 159, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(225, 111, 100, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(145, 145, 142, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(187, 132, 108, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(215, 129, 58, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 148, 51, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(108, 155, 125, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(91, 151, 189, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(167, 130, 195, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(205, 116, 159, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(225, 111, 100, 1);
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="83a20bc1-cb2f-4033-8483-5743a9c008e9" class="page sans"><header><h1 class="page-title">SEO</h1></header><div class="page-body"><h1 id="74209f9a-26ce-4666-baa3-11c253cd0a1d" class="">Optimisation des moteurs de recherche (SEO)</h1><figure id="c6adcb89-a4c4-49e7-97de-7c7daad09927" class="image"><a href="https://camo.githubusercontent.com/64f8905651212a80869afbecbf0a9c52a5d1e70beab750dea40a994fa9a9f3c6/68747470733a2f2f617765736f6d652e72652f62616467652e737667"><img src="https://camo.githubusercontent.com/64f8905651212a80869afbecbf0a9c52a5d1e70beab750dea40a994fa9a9f3c6/68747470733a2f2f617765736f6d652e72652f62616467652e737667" /></a></figure><p id="7d6fd4c9-f05c-42a4-8e7e-91c11b11f24b" class="">Une liste de contrôle / une collection utile de conseils et de techniques d'optimisation des moteurs de recherche (SEO).</p><h2 id="680581c5-8eec-40f6-af50-2e0de549bbe8" class="">Contenu</h2><ul id="f878749d-4cac-40b0-a76a-c7d62282bb39" class="bulleted-list"><li style="list-style-type:disc"><a href="https://github.com/marcobiedermann/search-engine-optimization/blob/main/readme.md#url">URL</a></li></ul><ul id="e5c2d536-f2f4-4632-9439-1bc211fb6c0e" class="bulleted-list"><li style="list-style-type:disc"><a href="https://github.com/marcobiedermann/search-engine-optimization/blob/main/readme.md#accessibility">Accessibilité</a></li></ul><ul id="974032cf-9d8c-4b97-ab05-6074b4faadeb" class="bulleted-list"><li style="list-style-type:disc"><a href="https://github.com/marcobiedermann/search-engine-optimization/blob/main/readme.md#meta-information">Informations Méta</a></li></ul><ul id="12ea7562-b981-4ce1-b10e-209f71c6cb3a" class="bulleted-list"><li style="list-style-type:disc"><a href="https://github.com/marcobiedermann/search-engine-optimization/blob/main/readme.md#keywords">Mots clés</a></li></ul><ul id="adfb3f94-677a-4e4a-878f-75ed195dbd81" class="bulleted-list"><li style="list-style-type:disc"><a href="https://github.com/marcobiedermann/search-engine-optimization/blob/main/readme.md#content">Contenu</a></li></ul><ul id="1bf78953-997b-49fa-a258-5f8bb5df1666" class="bulleted-list"><li style="list-style-type:disc"><a href="https://github.com/marcobiedermann/search-engine-optimization/blob/main/readme.md#images">Images</a></li></ul><ul id="80f8f746-672e-4a17-aac7-df96287dce6b" class="bulleted-list"><li style="list-style-type:disc"><a href="https://github.com/marcobiedermann/search-engine-optimization/blob/main/readme.md#videos">Vidéos</a></li></ul><ul id="4366e048-563f-4aca-b1f5-84ff6f21227c" class="bulleted-list"><li style="list-style-type:disc"><a href="https://github.com/marcobiedermann/search-engine-optimization/blob/main/readme.md#links">Liens</a></li></ul><ul id="a03bf15b-6da0-4532-abf2-292c9ce63465" class="bulleted-list"><li style="list-style-type:disc"><a href="https://github.com/marcobiedermann/search-engine-optimization/blob/main/readme.md#mobile">Mobile</a></li></ul><ul id="5b1d9f4f-1757-4d59-9893-cca835c500f8" class="bulleted-list"><li style="list-style-type:disc"><a href="https://github.com/marcobiedermann/search-engine-optimization/blob/main/readme.md#sitemap">Plan du site</a></li></ul><ul id="af4a1c25-22b6-4f8b-ba32-8ef53c0acbd9" class="bulleted-list"><li style="list-style-type:disc"><a href="https://github.com/marcobiedermann/search-engine-optimization/blob/main/readme.md#social-media">Médias sociaux</a></li></ul><ul id="4193f820-957d-406d-a5bb-642bcb4f18b7" class="bulleted-list"><li style="list-style-type:disc"><a href="https://github.com/marcobiedermann/search-engine-optimization/blob/main/readme.md#tools--services">Outils et services</a><ul id="6c51852f-ae16-4a8a-8123-b9cb7abadb7e" class="bulleted-list"><li style="list-style-type:circle"><a href="https://github.com/marcobiedermann/search-engine-optimization/blob/main/readme.md#webmasters">Webmasters</a></li></ul><ul id="98ee3d30-0c11-41fe-a382-8ec6fa63ffbc" class="bulleted-list"><li style="list-style-type:circle"><a href="https://github.com/marcobiedermann/search-engine-optimization/blob/main/readme.md#analytics">Analytique</a></li></ul><ul id="961e653c-4541-44dc-bda8-ad5cdd4706ed" class="bulleted-list"><li style="list-style-type:circle"><a href="https://github.com/marcobiedermann/search-engine-optimization/blob/main/readme.md#optimization">Optimisation</a></li></ul><ul id="96f27a04-b00e-4624-bc72-a45c4c901959" class="bulleted-list"><li style="list-style-type:circle"><a href="https://github.com/marcobiedermann/search-engine-optimization/blob/main/readme.md#keywords-1">Mots clés</a></li></ul><ul id="535f2fb3-2db0-4794-aa91-dacae42561fa" class="bulleted-list"><li style="list-style-type:circle"><a href="https://github.com/marcobiedermann/search-engine-optimization/blob/main/readme.md#links-1">Liens</a></li></ul><ul id="c421c408-c1cd-4827-a2eb-182601bc0e57" class="bulleted-list"><li style="list-style-type:circle"><a href="https://github.com/marcobiedermann/search-engine-optimization/blob/main/readme.md#structured-data">Données structurées</a></li></ul><ul id="b1c797e0-f5c2-439c-8207-de71e0b6b788" class="bulleted-list"><li style="list-style-type:circle"><a href="https://github.com/marcobiedermann/search-engine-optimization/blob/main/readme.md#bookmarklets">Bookmarklets</a></li></ul><ul id="c45c9060-f2a6-4dac-8694-6a4957e5d01c" class="bulleted-list"><li style="list-style-type:circle"><a href="https://github.com/marcobiedermann/search-engine-optimization/blob/main/readme.md#browser-extensions">Extensions de navigateur</a></li></ul><ul id="8342f38d-61c8-4a71-8113-38bf68e40cb1" class="bulleted-list"><li style="list-style-type:circle"><a href="https://github.com/marcobiedermann/search-engine-optimization/blob/main/readme.md#jekyll-plugins">Plugins Jekyll</a></li></ul><ul id="1489333d-d174-499b-b421-33347c4a4015" class="bulleted-list"><li style="list-style-type:circle"><a href="https://github.com/marcobiedermann/search-engine-optimization/blob/main/readme.md#typo3-extensions">Extensions TYPO3</a></li></ul><ul id="2b90123b-a17a-4204-8127-a2a4fb66198d" class="bulleted-list"><li style="list-style-type:circle"><a href="https://github.com/marcobiedermann/search-engine-optimization/blob/main/readme.md#wordpress-plugins">Plugins WordPress</a></li></ul></li></ul><ul id="cd1bed49-6783-45a3-9098-c3dfbbf63fac" class="bulleted-list"><li style="list-style-type:disc"><a href="https://github.com/marcobiedermann/search-engine-optimization/blob/main/readme.md#books">Livres</a></li></ul><ul id="94633768-c878-4946-a6ea-fdca00f926ca" class="bulleted-list"><li style="list-style-type:disc"><a href="https://github.com/marcobiedermann/search-engine-optimization/blob/main/readme.md#courses">Cours</a></li></ul><p id="1b8cc15d-1150-441f-b099-8b130d173392" class="">
+</p><h2 id="e971b6dd-9a62-487e-9d04-a578cbaf07e3" class="">URL</h2><ul id="826043f3-a573-40f6-935f-d5c326619ba8" class="bulleted-list"><li style="list-style-type:disc">URLs descriptifs : Utilisez une URL de page descriptive, qui doit refléter le mot clé que vous avez ciblé.</li></ul><ul id="81b5af50-ab8a-4f3c-99fd-2394f6fa2b87" class="bulleted-list"><li style="list-style-type:disc"><a href="https://www.youtube.com/watch?v=dSG6C33GwsE">Extension de fichier</a> - Ne supprimez pas l'extension de fichier dans les URL.</li></ul><ul id="82dbc322-ca10-4fa8-a590-f41d331196e5" class="bulleted-list"><li style="list-style-type:disc"><a href="https://webmasters.googleblog.com/2014/08/https-as-ranking-signal.html">HTTPS</a> - La sécurité est une priorité absolue pour Google.</li></ul><ul id="874ab3f9-4443-40d2-bbc6-fc50c6e788d1" class="bulleted-list"><li style="list-style-type:disc"><a href="https://www.youtube.com/watch?v=AQcSFsQyct8">Traits d'union</a> - Divisez les mots à l'aide de traits d'union.</li></ul><ul id="5e403bb1-8bd9-4ddc-802b-13a385f0604f" class="bulleted-list"><li style="list-style-type:disc"><a href="https://support.google.com/webmasters/answer/62399">Localisation</a> - Choisissez un domaine spécifique au pays, pour de meilleurs résultats de recherche locale.</li></ul><ul id="14ec99d6-5741-41c6-82eb-c8ad7f7cabbb" class="bulleted-list"><li style="list-style-type:disc"><a href="https://www.youtube.com/watch?v=_MswMYk05tk">Sous-domaine ou sous-dossier</a> - Les sous-domaines sont considérés comme des domaines distincts.</li></ul><ul id="a4a5b9fc-d502-4feb-9ab0-d35df60d906d" class="bulleted-list"><li style="list-style-type:disc"><a href="https://support.google.com/analytics/answer/1033867">Créateur d'URL</a> - Utilisez cet outil pour ajouter des paramètres de campagne personnalisés à vos URL.</li></ul><p id="c9c25ff7-65ad-4386-a00f-e8e6f3eadb2f" class="">
+</p><h2 id="d0580b7f-e4c7-4a7b-9045-b2e616b35266" class="">Accessibilité</h2><ul id="80072a05-579f-4451-b1af-058e891bd856" class="bulleted-list"><li style="list-style-type:disc">403 : Fournir une page 403 - Accès refusé.</li></ul><ul id="3b0d87d4-1190-412b-b715-cdc09863c977" class="bulleted-list"><li style="list-style-type:disc">404 : Fournir une page 404 - Page non trouvée.</li></ul><ul id="c55995fe-bbe1-42b3-a72e-da339e5e5b61" class="bulleted-list"><li style="list-style-type:disc"><a href="https://developers.google.com/structured-data/slsb-overview">Recherche personnalisée</a> - Grâce au champ de recherche Google Sitelink, les internautes peuvent atteindre votre contenu plus rapidement.</li></ul><ul id="f048ca97-aabc-4dcb-9f92-f4fe0d74b570" class="bulleted-list"><li style="list-style-type:disc">Fichier non trouvé : Évitez les erreurs <code>404 FILE_NOT_FOUND</code>.</li></ul><ul id="e4ac1e29-f025-495f-89d9-461641be731a" class="bulleted-list"><li style="list-style-type:disc">Mise en page : Utilisez des <code>divs</code> plutôt que des <code>tableaux</code> pour la mise en page. L'utilisation de <code>tableaux</code> n'est pas sémantiquement correcte.</li></ul><ul id="46e9ef9c-40b6-485c-ba51-27a63415bc8f" class="bulleted-list"><li style="list-style-type:disc">Déplacer un site web : Redirigez tous vos liens vers le nouvel emplacement via <code>.htaccess</code>.</li></ul><ul id="2df37d28-0131-4519-88ce-7a62e03b5bc8" class="bulleted-list"><li style="list-style-type:disc"><a href="https://support.google.com/webmasters/answer/1663744">Pagination</a> - Implémentez les attributs <code>rel=&quot;next&quot;</code> et <code>rel=&quot;prev&quot;</code> aux liens.</li></ul><ul id="20b24b0e-6886-40fa-a38e-e150fe6491f3" class="bulleted-list"><li style="list-style-type:disc"><a href="https://developers.google.com/webmasters/mobile-sites/mobile-seo/common-mistakes/slow-mobile-pages">Performances</a> - Les performances et le temps de chargement sont importants.</li></ul><ul id="886d292f-898e-43de-bf39-a06c7bd0e4be" class="bulleted-list"><li style="list-style-type:disc">Redirections : Évitez les redirections si possible. Utilisez la redirection 301 plutôt que 302.</li></ul><ul id="a800cba9-f37f-4cd0-b40d-ebd91904eca5" class="bulleted-list"><li style="list-style-type:disc"><a href="https://schema.org/">RichSnippets</a> - Marquez votre code avec des snippets riches, ils s'affichent sur la page des résultats de recherche.</li></ul><ul id="c63d4848-fda9-4c1c-8253-b3cdc32072a2" class="bulleted-list"><li style="list-style-type:disc"><a href="https://en.wikipedia.org/wiki/Robots_exclusion_standard">Robots</a> - Bloquer les pages qui ne doivent pas être indexées via le fichier <code>robots.txt</code> ou
+<code>&lt;meta name=&quot;robots&quot; content=&quot;&quot;&gt;</code>.</li></ul><ul id="9e9b063b-a87c-4294-a4b9-c507cb36ea78" class="bulleted-list"><li style="list-style-type:disc">Validation : Écrivez du code valide<a href="https://validator.w3.org/">(validateur HTML,</a> <a href="https://jigsaw.w3.org/css-validator/">validateur CSS</a>).</li></ul><ul id="f85ecc3c-6dad-43f4-af54-8005b707d875" class="bulleted-list"><li style="list-style-type:disc"><a href="https://www.w3.org/TR/wai-aria/">WAI-Aria</a> - Utilisez les balises WAI-Aria pour aider les machines à comprendre votre code.</li></ul><p id="6c93ccf2-867f-4cad-b4da-3e115d27134d" class="">
+</p><h2 id="bf10ed76-4107-4fa9-a6a8-6e247825e997" class="">Informations Méta</h2><ul id="91ffd650-5f5c-43d6-98e0-3a1ea11a0287" class="bulleted-list"><li style="list-style-type:disc"><a href="https://www.youtube.com/watch?v=W4gr88oHb-k">Description</a> - Chaque page doit avoir une description unique (160 caractères maximum).
+<code>&lt;meta name=&quot;description&quot; content=&quot;&quot;&gt;</code>.</li></ul><ul id="94145934-70b3-4710-9a7c-b0b173b609b1" class="bulleted-list"><li style="list-style-type:disc">Titre : Chaque page doit avoir un titre parlant unique (60 - 100 caractères) <code>&lt;titre&gt;Titre du site web&lt;/titre&gt;</code>.</li></ul><p id="ffc2ca57-ddc1-4255-ac05-5afce34add16" class="">
+</p><h2 id="19d57ee2-f1c4-4479-9e0d-e8c436201a96" class="">Mots clés</h2><ul id="2520111c-0e55-49ae-b8fb-7e73e0f870a0" class="bulleted-list"><li style="list-style-type:disc">Contenu : Le mot-clé doit apparaître dans ~3% de la longueur de l'article.</li></ul><ul id="8b01f347-b706-406c-b502-fd56128e863c" class="bulleted-list"><li style="list-style-type:disc">En-tête : Le mot-clé doit apparaître dans les titres.</li></ul><ul id="7c410432-604a-49c7-8fdc-de5a11a7553e" class="bulleted-list"><li style="list-style-type:disc"><a href="https://www.youtube.com/watch?v=jK7IPbnmvVU">Métabalise</a> - Vous pouvez omettre la balise <code>&lt;meta name=&quot;keywords&quot; content=&quot;&quot;&gt;</code>,
+les moteurs de recherche n'utilisent pas cette balise méta.</li></ul><ul id="9431d57f-2beb-4f66-bd7c-ce26e7568304" class="bulleted-list"><li style="list-style-type:disc">Recherche : Classez les mots clés ayant un trafic élevé et une concurrence moindre.</li></ul><ul id="0cfdeb56-e200-47fd-b498-c3697dbc3a09" class="bulleted-list"><li style="list-style-type:disc">Unique : Chaque page doit comporter un seul et unique mot clé ciblé.</li></ul><ul id="0ecbfdc4-3120-493d-9850-0ef1e8119762" class="bulleted-list"><li style="list-style-type:disc">Titre : Le mot-clé doit apparaître dans le titre de la page.</li></ul><ul id="433314a1-e934-41d1-b322-18f1f2194105" class="bulleted-list"><li style="list-style-type:disc"><a href="https://www.youtube.com/watch?v=rAWFv43qubI">URL</a> - Le mot-clé doit apparaître dans le nom de l'URL.</li></ul><p id="f096dc8c-fe6e-4328-9ada-8735f6a3910d" class="">
+</p><h2 id="a03135be-73e0-4b6c-9b96-6609bf99d2e6" class="">Contenu</h2><ul id="7b9eb834-fd80-426b-a89a-526407012ecd" class="bulleted-list"><li style="list-style-type:disc">Le contenu : Le contenu est ce qui compte le plus en matière de référencement.</li></ul><ul id="0f622116-0cae-48ce-adfb-05f0f629f855" class="bulleted-list"><li style="list-style-type:disc">Flash : évitez le contenu et les pages en Flash. Ils ne sont pas accessibles sur les téléphones mobiles et seront moins bien classés.</li></ul><ul id="1dd80766-197a-4483-8e4a-4d9f298a78f0" class="bulleted-list"><li style="list-style-type:disc">La fraîcheur : Le nouveau contenu est important. Il est recommandé de mettre à jour les pages ou de poster régulièrement.</li></ul><ul id="96de9b6a-dccd-4c7f-a6c2-f6520220c70a" class="bulleted-list"><li style="list-style-type:disc">Titres : Structure claire <code>H1</code> -H6 max. 70 caractères de long.</li></ul><ul id="1e220751-0f93-46f5-8e5a-62b3a1be6d3f" class="bulleted-list"><li style="list-style-type:disc">Longueur : L'article doit comporter au moins 300 mots.</li></ul><ul id="c4590985-69ae-4cdd-829f-11ed89860ac1" class="bulleted-list"><li style="list-style-type:disc">Fort : Utilisez une balise <code>forte</code> pour mettre en évidence votre mot-clé ciblé.</li></ul><ul id="9b329e70-15f4-490d-af52-11f1bb6a6156" class="bulleted-list"><li style="list-style-type:disc"><a href="https://www.youtube.com/watch?v=mQZY7EmjbMA">Unicité</a> - Ne fournissez pas de contenu dupliqué, utilisez des types de contenu uniques.</li></ul><p id="0a2bdaa0-2b67-44df-9d8f-8e09abf8fb99" class="">
+</p><h2 id="23d37881-515f-46fc-99a9-97b0b790c754" class="">Images</h2><ul id="124d3021-ab2b-4ef5-aedc-67b67d51101c" class="bulleted-list"><li style="list-style-type:disc"><a href="https://support.google.com/webmasters/answer/114016">Balise Alt</a> - Ajoutez une balise Alt, c'est-à-dire une description de l'image (60 à 70 caractères).</li></ul><ul id="3ab2ce0d-8e2c-44cf-826c-4a66c75ee469" class="bulleted-list"><li style="list-style-type:disc">Dimensions : Ajoutez les attributs <code>width=&quot;&quot;</code> et <code>height=&quot;&quot;</code> à l'image.</li></ul><ul id="bde05623-fab2-459d-82bc-5afcad041a11" class="bulleted-list"><li style="list-style-type:disc"><a href="https://www.youtube.com/watch?v=h2SWuUobbr0">Nom du fichier</a> - Utilisez un nom court et descriptif.</li></ul><ul id="d099d316-a6bc-4a2b-9160-9f74363fc313" class="bulleted-list"><li style="list-style-type:disc"><a href="https://imageoptim.com/">Optimisation</a> - Optimisez les images en supprimant certaines informations méta.</li></ul><ul id="d7d3fbfb-3112-47d3-b701-6ecd59272d80" class="bulleted-list"><li style="list-style-type:disc"><a href="https://www.w3.org/TR/html-picture-element/">Images réactives</a> - Servez l'image la plus optimisée correspondant à la taille de la fenêtre.</li></ul><ul id="3031a637-8038-4a7b-8b73-14539b2c03e3" class="bulleted-list"><li style="list-style-type:disc">Taille : gardez la taille des fichiers aussi faible que possible.</li></ul><p id="631ef587-e1d8-42b2-b635-b8e49c3512ec" class="">
+</p><h2 id="93a80d53-52ad-4ebe-a6b6-3a75845275ea" class="">Vidéos</h2><ul id="ea55774b-488c-466c-92b2-00015b50cf27" class="bulleted-list"><li style="list-style-type:disc">Contrôles : Ajoutez des commandes pour lire et contrôler votre vidéo.</li></ul><ul id="349b1eb9-acf7-4ae6-816f-89839e353cba" class="bulleted-list"><li style="list-style-type:disc">Intégrer : Autorisez les autres à intégrer vos vidéos.</li></ul><ul id="85f66111-e55d-4337-a0a5-32ae83aaabdd" class="bulleted-list"><li style="list-style-type:disc">Transcriptions : Utilisez les transcriptions pour l'indexation, la facilité d'utilisation et le contenu.</li></ul><ul id="f00c5116-65c9-4c74-8e47-77f387dc8d62" class="bulleted-list"><li style="list-style-type:disc"><a href="https://developers.google.com/webmasters/mobile-sites/mobile-seo/common-mistakes/unplayable-content">Contenu injouable</a> - Évitez les contenus vidéo injouables. Utilisez la balise HTML5 <code>&lt;video&gt;</code> au lieu de Flash.</li></ul><p id="ff897b41-44ac-476d-8ede-a59ccb0f4924" class="">
+</p><h2 id="89d06104-8dff-4366-a969-86a6d636f2dd" class="">Liens</h2><ul id="35295a4d-b749-4298-ab0d-5b6ef8df7be7" class="bulleted-list"><li style="list-style-type:disc">Backlinks : N'ajoutez des liens externes que si vous avez obtenu un lien retour vers votre site.</li></ul><ul id="e11f35b4-d2e4-463c-b9a8-91243628b13b" class="bulleted-list"><li style="list-style-type:disc">Liens internes : Ajoutez ~3 liens internes à votre contenu.</li></ul><ul id="2b58cc75-14d6-444c-a1e7-d4c48850f397" class="bulleted-list"><li style="list-style-type:disc"><a href="https://moz.com/learn/seo/hreflang-tag">Langues</a> - La balise hreflang indique à Google la langue utilisée sur une page spécifique.
+page spécifique, afin que le moteur de recherche puisse proposer ce résultat aux utilisateurs
+qui effectuent des recherches dans cette langue
+<code>&lt;link rel=&quot;alternate&quot; href=&quot;example.com/fr/&quot; hreflang=&quot;fr-fr&quot; /&gt;</code>.</li></ul><ul id="3efd701c-4db3-4238-8498-ae62a6563bfb" class="bulleted-list"><li style="list-style-type:disc">Nommage : Utilisez un nom de lien descriptif : "Cliquez ici" ou "En savoir plus" sont de mauvais textes de lien. Mieux vaut "En savoir plus sur le référencement et l'accessibilité du Web".</li></ul><ul id="f1f2bb37-2728-423c-9ce7-6970d8aa8d27" class="bulleted-list"><li style="list-style-type:disc"><a href="https://support.google.com/webmasters/answer/96569">nofollow</a> - Ajoutez l'attribut <code>rel=&quot;nofollow&quot;</code> aux liens externes uniquement pour éviter le spam et les mauvais liens.</li></ul><ul id="b519826d-cb09-4c4c-bf68-174aa881b443" class="bulleted-list"><li style="list-style-type:disc">Title : ajoute l'attribut title aux liens.</li></ul><p id="79893d77-a30d-47e5-9bb4-be97cd6c0bbe" class="">
+</p><h2 id="8745f752-fb5f-41b1-bbac-3e5f083aa045" class="">Mobile</h2><ul id="b0ef3c60-bd11-44b8-9c19-86bf4afa9be7" class="bulleted-list"><li style="list-style-type:disc"><a href="http://applinks.org/documentation/">AppLinks</a> - Les applications qui renvoient à votre contenu peuvent ensuite utiliser ces métadonnées pour établir un lien profond avec votre application.</li></ul><ul id="c5d730d5-5538-4d3e-8d82-c6771d3ac43f" class="bulleted-list"><li style="list-style-type:disc"><a href="https://googlewebmastercentral.blogspot.be/2014/11/helping-users-find-mobile-friendly-pages.html">convivial pour les mobiles</a> - Les sites optimisés pour les mobiles sont marqués dans les résultats de recherche. Testez un <a href="https://www.google.com/webmasters/tools/mobile-friendly/">site adapté aux mobiles</a>.</li></ul><ul id="89ae4a39-c77e-4996-9bde-eb14c0c924e7" class="bulleted-list"><li style="list-style-type:disc"><a href="https://developer.apple.com/library/ios/documentation/AppleApplications/Reference/SafariWebContent/PromotingAppswithAppBanners/PromotingAppswithAppBanners.html">Smart App Banner</a> - Safari dispose d'une fonction Smart App Banner qui offre une méthode standardisée de promotion des applications sur l'App Store à partir d'un site web.</li></ul><ul id="16ed595d-9816-467e-9ffe-fdce9a8ac710" class="bulleted-list"><li style="list-style-type:disc"><a href="https://developers.google.com/speed/docs/insights/SizeTapTargetsAppropriately">Cibles cliquables</a> - Les liens cliquables ne doivent pas être trop petits.</li></ul><ul id="3f0a0be4-ce96-4a89-98b8-f2126c3d4863" class="bulleted-list"><li style="list-style-type:disc">Viewport : Indiquer aux navigateurs comment ajuster les dimensions et la mise à l'échelle de la page en fonction du périphérique.
+<code>&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;&gt;</code></li></ul><p id="b98a1181-0817-4f7c-9165-e2dc274379cd" class="">
+</p><h2 id="9221a8be-4f80-49e0-afcb-c1f76068b7ea" class="">Plan du site</h2><ul id="b3fcee79-ecbf-4969-a3cc-e429efde0799" class="bulleted-list"><li style="list-style-type:disc"><a href="https://www.youtube.com/watch?v=hi5DGOu1uA0">Plan du site HTML</a> - Un plan du site HTML permet aux visiteurs de naviguer facilement sur un site web.</li></ul><ul id="7ca93f22-8c07-4722-aa90-af7c2a5d682d" class="bulleted-list"><li style="list-style-type:disc"><a href="https://support.google.com/webmasters/answer/178636">Image sitemap</a> - Augmente la visibilité de vos images dans les résultats de la recherche d'images.</li></ul><ul id="446fe428-9548-4006-8f20-00df2e12048c" class="bulleted-list"><li style="list-style-type:disc"><a href="https://support.google.com/webmasters/answer/6082207">Plan de site mobile</a> - Pour les téléphones fonctionnels, vous pouvez créer un plan de site mobile.</li></ul><ul id="cc2701b0-9d31-4c0b-9c70-3d5110c9c37d" class="bulleted-list"><li style="list-style-type:disc"><a href="https://support.google.com/webmasters/answer/80471">Plan du site vidéo</a> - Assurez-vous que les moteurs de recherche connaissent l'ensemble du contenu vidéo de votre site.</li></ul><ul id="19aef4ad-dc32-49d9-942c-a768f52f7478" class="bulleted-list"><li style="list-style-type:disc"><a href="https://support.google.com/webmasters/answer/183668">Plan de site XML</a> - Aide les moteurs de recherche à indexer vos pages.</li></ul><p id="939fcadb-3cc2-4e5b-accb-7a5f7307af87" class="">
+</p><h2 id="a196226b-3cf8-4e8a-82bf-f9ec1ca7cfac" class="">Médias sociaux</h2><ul id="db343357-db0e-4073-840f-65e68b585213" class="bulleted-list"><li style="list-style-type:disc">Informations sur l'auteur.</li></ul><ul id="e24aeb17-a10c-4d08-955d-47fe2d0fecf2" class="bulleted-list"><li style="list-style-type:disc"><a href="https://developers.facebook.com/docs/sharing/best-practices">Facebook</a> - Partage des meilleures pratiques pour les sites web et les applications mobiles.</li></ul><ul id="1dbf005e-6afe-4317-9fc0-02a76e76e429" class="bulleted-list"><li style="list-style-type:disc"><a href="http://ogp.me/">OpenGraph</a> - Le protocole Open Graph permet à toute page web de devenir un objet riche dans un graphe social.</li></ul><ul id="5762eef7-3291-4951-a6a4-ab4b8babc92a" class="bulleted-list"><li style="list-style-type:disc"><a href="https://developers.google.com/webmasters/structured-data/customize/social-profiles">Profils sociaux</a> - Ajoutez des profils sociaux à vos résultats de recherche Google.</li></ul><ul id="8143c4ee-66cb-4ad4-9f3b-3be805d58231" class="bulleted-list"><li style="list-style-type:disc">Partage social : Proposez des options de partage pour votre site.</li></ul><ul id="dc49038a-22b8-4a16-8fe1-908552ed2aba" class="bulleted-list"><li style="list-style-type:disc"><a href="https://dev.twitter.com/cards/getting-started">Twitter</a> - Avec les cartes Twitter, vous pouvez joindre des photos, des vidéos et des expériences médiatiques à vos Tweets.</li></ul><p id="ecbe8ac3-a342-4a7c-b9c0-f734bb28d116" class="">
+</p><h2 id="2a3424af-e158-433b-9e9b-570bfdc3fb21" class="">Outils et services</h2><p id="544e5f80-edc3-48f1-be43-b01fa4bcad45" class="">
+</p><h3 id="80dcdd70-0795-4ae4-b972-4d1a2fae0a3c" class="">Webmasters</h3><ul id="e6680b00-b032-4013-b02e-67d865a07734" class="bulleted-list"><li style="list-style-type:disc"><a href="http://www.bing.com/toolbox/webmaster">Bing Webmasters</a> - Permet aux webmasters d'ajouter leurs sites Web à l'index d'exploration de Bing.</li></ul><ul id="97dd6026-c63e-41ee-b164-9c525b055724" class="bulleted-list"><li style="list-style-type:disc"><a href="https://www.google.com/webmasters/">Google Search Console (GWT)</a> - Permet aux webmasters de vérifier le statut d'indexation et d'optimiser la visibilité de leurs sites Web.</li></ul><ul id="c669db6f-659d-49a7-908a-94c47a2ecf86" class="bulleted-list"><li style="list-style-type:disc"><a href="https://www.google.com/analytics/tag-manager/">Gestionnaire de balises Google</a> - Découvrez le gestionnaire de balises Google Analytics et la façon dont il peut vous simplifier la vie et vous éviter des demandes informatiques. Lancez de nouvelles balises en quelques clics.</li></ul><p id="38a810e8-25a3-4c5a-b45f-7078b55413c5" class="">
+</p><h3 id="4068595f-9523-497b-966f-cae76a0822b8" class="">Analytique</h3><ul id="5afe2402-46c3-4e9f-aac9-cdf17ded25e0" class="bulleted-list"><li style="list-style-type:disc"><a href="https://ahrefs.com/">Ahrefs</a> - Analyser
+sites Web, suivez les médias sociaux, créez des liens retour - Ahrefs a tout ce qu'il vous faut.
+Essayez nos outils de marketing et de référencement Site Explorer et Content Explorer
+dès aujourd'hui !</li></ul><ul id="1733d315-0cb9-4763-bb3c-086d0006c4f9" class="bulleted-list"><li style="list-style-type:disc"><a href="https://app.buzzsumo.com/research/most-shared">BuzzSumo</a> - Trouvez le contenu le plus partagé pour n'importe quel sujet ou domaine.</li></ul><ul id="dbb12cc4-abd7-4a66-a740-6474f698ac3f" class="bulleted-list"><li style="list-style-type:disc"><a href="https://moz.com/followerwonk">Followerwonk</a> - Outils pour l'analyse de Twitter, la recherche de biographies et plus encore.</li></ul><ul id="44bbbb72-3f69-4faa-ae84-ce01bcf80912" class="bulleted-list"><li style="list-style-type:disc"><a href="https://www.google.com/analytics/">Google Analytics</a> - Génère des statistiques détaillées sur le trafic d'un site Web.</li></ul><ul id="d2c6f825-82ab-4c4e-a822-2731d7890f2a" class="bulleted-list"><li style="list-style-type:disc"><a href="https://moz.com/researchtools/ose/">Open Site Explorer</a> - Utilisez Open Site Explorer pour identifier les opportunités de création de liens.
+Recherchez des backlinks, identifiez les pages les plus importantes, regardez l'activité sociale, et
+analyser le texte d'ancrage.</li></ul><ul id="e4a19783-1788-4d52-87bb-cec061bf0361" class="bulleted-list"><li style="list-style-type:disc"><a href="https://matomo.org/">Matomo</a> - Une plateforme analytique ouverte.</li></ul><ul id="0b337097-a9ca-4e55-aac6-9c8bd0eb6b45" class="bulleted-list"><li style="list-style-type:disc"><a href="https://www.semrush.com/">SEMrush</a> -
+SEMrush est une suite de veille concurrentielle puissante et polyvalente pour le
+marketing en ligne, du SEO et PPC aux médias sociaux et à la recherche de publicité vidéo.</li></ul><ul id="4afb807e-aaa4-4f18-9a25-3a45b7aa73d5" class="bulleted-list"><li style="list-style-type:disc"><a href="https://seomator.com/">Seomator</a> - Outil d'audit de référencement et robot d'exploration de sites Web pour l'amélioration des performances de référencement avec des conseils de réparation.</li></ul><ul id="847f3ca2-1ee5-4444-818f-fbc8bf297df9" class="bulleted-list"><li style="list-style-type:disc"><a href="https://github.com/eyecatchup/SEOstats">SEOstats</a> - SEOstats est une puissante bibliothèque PHP à code source ouvert qui permet de demander un grand nombre de mesures relatives au référencement.</li></ul><ul id="9b2e6762-576a-49ad-8181-40c81a682f34" class="bulleted-list"><li style="list-style-type:disc"><a href="https://www.similarweb.com/">SimilarWeb</a> - Comparez le trafic de sites Web avec l'outil avancé d'estimation du trafic de SimilarWeb.com.
+de SimilarWeb. Voyez les sources de trafic de n'importe quel site web et découvrez leur
+stratégies de marketing en ligne.</li></ul><ul id="24fe31c9-1efe-4f5b-9fee-52c77a11311a" class="bulleted-list"><li style="list-style-type:disc"><a href="https://www.spyfu.com/">SpyFu</a> -
+Recherches illimitées de mots-clés de n'importe quel concurrent pour le référencement ou les publicités Google.
+Recherchez des mots clés, et trouvez le contenu le plus fort de n'importe quel domaine et leur
+le contenu publicitaire le plus dominant.</li></ul><ul id="47ee3465-9db4-498d-bdc6-076896e39556" class="bulleted-list"><li style="list-style-type:disc"><a href="https://analytics.twitter.com/">Twitter Analytics</a> - Mesurez et renforcez votre impact sur Twitter.</li></ul><ul id="6c9b9a18-d25a-45d4-9858-aefd2caa7d2b" class="bulleted-list"><li style="list-style-type:disc"><a href="https://plausible.io/">Plausible</a> - Alternative simple et respectueuse de la vie privée à Google Analytics.</li></ul><p id="04de7de2-2da7-478e-bc38-5997eb9f7742" class="">
+</p><h3 id="12d4b94d-e000-4734-886d-83423259dfb4" class="">Optimisation</h3><ul id="eb947bed-b1fb-4190-b316-17332830970c" class="bulleted-list"><li style="list-style-type:disc"><a href="https://web.dev/">Web.dev</a> - Mettez les
+les capacités modernes du Web sur vos propres sites et applications grâce à des
+des conseils et des analyses utiles de Web.dev. Que vous ayez déjà un site Web
+ou que vous commenciez à peine, apprenez à construire pour le web moderne sur
+Web.dev.</li></ul><ul id="bc311079-b603-4451-bf05-ce87ade0dcf0" class="bulleted-list"><li style="list-style-type:disc"><a href="https://developers.google.com/speed/pagespeed/insights/">PageSpeed Insights</a> - Page Speed Insights mesure les performances d'une page pour les appareils mobiles et les appareils de bureau.</li></ul><ul id="ecc91ef4-a201-4511-bfca-05aa2cab3083" class="bulleted-list"><li style="list-style-type:disc"><a href="https://varvy.com/">Varvy Seo tool</a> - Affiche : la force du domaine, les liens, le référencement des images, les comptes et mentions sociales, le référencement des pages/techniques, la vitesse des pages et plus encore.</li></ul><ul id="f6500644-4f70-451a-9282-6c3e95c1b775" class="bulleted-list"><li style="list-style-type:disc"><a href="https://www.webpagetest.org/">Webpagetest.org</a> - Web Page Test vous donne une chute de performance globale ainsi qu'une chronologie de rendu pour les sites.
+ainsi qu'un calendrier de rendu pour les sites. Il fournit également des informations essentielles sur
+le temps nécessaire pour obtenir le premier octet et ce qui pourrait freiner les performances de la page Web.</li></ul><ul id="2e82f396-f5ec-43f6-8c84-99bcb582db59" class="bulleted-list"><li style="list-style-type:disc"><a href="https://www.woorank.com/">WooRank</a> - WooRank vous aidera à résoudre les problèmes de votre site et à identifier les opportunités qui vous permettront de devancer la concurrence.</li></ul><ul id="7ae6e2e7-8c55-4c31-b7a6-fa9b7be9fff4" class="bulleted-list"><li style="list-style-type:disc"><a href="https://awesometechstack.com/">Awesometechstack.com</a> - AwesomeTechStack fournit des informations sur la sécurité, la modernité et les
+performance de la pile technologique de n'importe quel site web et des conseils pour améliorer
+les vitales du web et la pile technologique.</li></ul><p id="6e1b762e-5943-44a5-8a0c-94cd8d901a72" class="">
+</p><h3 id="a62eb2c3-810f-4b49-a53e-cbaa3a7baa35" class="">Mots clés</h3><ul id="3f22d9c0-589e-4846-a85b-d70334d97a70" class="bulleted-list"><li style="list-style-type:disc"><a href="https://www.google.com/trends/">Google Trends</a> - Explorez les sujets de recherche tendance avec Google Trends.</li></ul><ul id="ae5e9ab8-f73c-4fa1-b84e-e82e7faebb10" class="bulleted-list"><li style="list-style-type:disc"><a href="https://adwords.google.com/KeywordPlanner">Planificateur de mots-clés</a> - Planifiez vos campagnes sur le réseau de recherche et apprenez ce que vos clients recherchent.</li></ul><ul id="bf2da7f7-4a48-49aa-b27e-7a4668b4d746" class="bulleted-list"><li style="list-style-type:disc"><a href="http://keywordtool.io/">Keyword Tool</a> -
+Meilleure alternative GRATUITE à Google Keyword Tool pour la recherche de mots-clés SEO et PPC.
+recherche de mots-clés ! Obtenez 750+ mots-clés pertinents de longue traîne de Google Suggest en
+secondes !</li></ul><ul id="2fa1481a-51c4-4cfb-b168-f94c6892d033" class="bulleted-list"><li style="list-style-type:disc"><a href="https://moz.com/explorer">Moz Keyword Explorer</a> - Outil de recherche de mots clés payant qui fournit des données précises sur le volume de recherche, la difficulté des mots clés, les caractéristiques des SERP et le taux de clics organiques.</li></ul><ul id="4b9ac6bd-0039-4d0b-8146-b1d10afe87bf" class="bulleted-list"><li style="list-style-type:disc"><a href="https://keywordclarity.io/">Keyword Clarity</a> - Outil gratuit d'analyse des mots clés qui vous permet de visualiser et de regrouper
+des métriques de mots-clés avec des diagrammes en arbre. L'outil fonctionne avec des données provenant de la
+Google Search Console API et CSVs.</li></ul><ul id="445e608e-2e82-460a-883b-aebe53126c58" class="bulleted-list"><li style="list-style-type:disc"><a href="https://www.seowl.co/">SEOwl</a> - Suivez le classement de vos mots clés au fil du temps et surveillez vos liens retour.</li></ul><p id="192fca17-ac32-43a8-9aff-25aad25fa210" class="">
+</p><h3 id="9623f864-78f3-4f17-b868-99093bc42483" class="">Liens</h3><ul id="0ae42275-418d-4eab-960b-faa8cee45088" class="bulleted-list"><li style="list-style-type:disc"><a href="http://www.openlinkprofiler.org/">OpenLinkProfiler</a> - Obtenez une analyse approfondie des backlinks vivants les plus récents.</li></ul><ul id="299c9ebc-c677-4da6-b7de-d828f48455ba" class="bulleted-list"><li style="list-style-type:disc"><a href="http://tools.seochat.com/tools/search-spider-simulator">Search Engine Spider Simulator</a> - Cet outil simule un moteur de recherche en affichant le contenu d'une page Web exactement de la manière dont le robot du moteur de recherche la verrait lorsqu'il la consulterait.
+page Web exactement de la manière dont le robot du moteur de recherche le verrait quand il
+rampe la page : Voir les éléments les plus saillants ou inaccessibles de la page.</li></ul><ul id="876c7fe7-71d2-4808-920a-2483b9638bd0" class="bulleted-list"><li style="list-style-type:disc"><a href="https://www.screamingfrog.co.uk/seo-spider/">Screaming Frog SEO Spider Tool &amp; Crawler Software</a> - Le Screaming Frog SEO Spider est un petit programme de bureau (PC ou Mac)
+qui explore les liens, les images, les CSS, les scripts et les applications des sites Web du point de vue du référencement.
+d'un point de vue SEO.</li></ul><ul id="a14103ed-ae86-41ca-ade2-0d1f6b4fd54b" class="bulleted-list"><li style="list-style-type:disc"><a href="https://github.com/fulldecent/linkbuilding-spider">Linkbuilding Spider</a> - Un projet PHP pour vérifier si des sites Web renvoient à votre site.</li></ul><p id="7a028ec8-fc42-4e2f-b88c-bd6a8e633d6c" class="">
+</p><h3 id="c8f684b0-ba01-4e1a-a2a7-5398a8870ef0" class="">Données structurées</h3><ul id="5352ca14-ab1e-4f7d-a6e8-c1381854d9a3" class="bulleted-list"><li style="list-style-type:disc"><a href="https://developers.facebook.com/tools/debug">Débogueur Facebook</a> - Saisissez l'URL que vous souhaitez analyser pour voir comment le balisage de la page apparaît à Facebook.</li></ul><ul id="91b838fd-0e2c-430a-9b15-4a03b926d26d" class="bulleted-list"><li style="list-style-type:disc"><a href="https://developers.pinterest.com/rich_pins/validator/">Pinterest</a> - Validez vos épingles riches et faites une demande pour les obtenir sur Pinterest.</li></ul><ul id="500d2949-e9d4-4aea-8e8a-4bf383f2e346" class="bulleted-list"><li style="list-style-type:disc"><a href="https://developers.google.com/structured-data/testing-tool/">Outil de test des données structurées</a> - Collez vos rich snippets ou votre url pour les tester.</li></ul><ul id="ff4931ab-5c98-428d-bf79-789a166a6ee3" class="bulleted-list"><li style="list-style-type:disc"><a href="https://cards-dev.twitter.com/validator">Validateur de cartes Twitter</a> - Saisissez l'URL de la page contenant les balises méta à valider.</li></ul><p id="8aa03f46-aaba-4eff-9b71-8ad396c01713" class="">
+</p><h3 id="08e8d443-4d97-4c34-8e87-f9d2263481d0" class="">Bookmarklets</h3><ul id="e762c22c-83f7-47a1-ad45-98104be4d3f3" class="bulleted-list"><li style="list-style-type:disc"><a href="https://github.com/carlsednaoui/seo-bookmarklet">OuiSEO</a> - Un bookmarklet open-source qui vous montre des informations sur le référencement sur page et les métadonnées sociales.</li></ul><ul id="57991932-22d5-431c-bb71-0ce8532df1e5" class="bulleted-list"><li style="list-style-type:disc"><a href="https://twkm.ca/projects/seo-bookmarklet">SEO Bookmarklet</a> - Un Bookmarklet SEO à guichet unique pour examiner rapidement le référencement sur site.</li></ul><p id="369e419b-d685-4287-a6f9-55f05137f9d2" class="">
+</p><h3 id="8437ee7f-053f-4f00-a599-bdb85698d424" class="">Extensions de navigateur</h3><ul id="cd837e91-0592-46c9-b897-5dc5d0e9f804" class="bulleted-list"><li style="list-style-type:disc"><a href="https://moz.com/tools/seo-toolbar">MozBar</a> - La barre d'outils SEO de Moz vous permet d'accéder rapidement à de nombreux facteurs de référencement sur page.
+l'autorité du domaine et de la page, ainsi qu'un bouton nofollow rapide.
+Téléchargez la barre d'outils gratuite dès aujourd'hui !</li></ul><p id="4051de8b-fde8-4775-bdba-c689e69f3680" class="">
+</p><h3 id="dc792546-3645-4678-a24a-a6fdd88afe31" class="">Plugins Jekyll</h3><ul id="a44cc031-adec-4716-bbae-f5ea99a87531" class="bulleted-list"><li style="list-style-type:disc"><a href="https://github.com/jekyll/jekyll-seo-tag">Jekyll SEO Tag</a> - Un plugin Jekyll permettant d'ajouter des balises de métadonnées pour les moteurs de recherche et les réseaux sociaux afin de mieux indexer et afficher le contenu de votre site.</li></ul><p id="7882c0d5-b912-4946-a608-a0d37f8711be" class="">
+</p><h3 id="3cd9a6b4-f37d-414c-a20e-35d5edc7893d" class="">Extensions TYPO3</h3><ul id="70a54e72-51bd-42e3-b164-2ac2178a446c" class="bulleted-list"><li style="list-style-type:disc"><a href="https://typo3.org/extensions/repository/view/seo_basics">Fonctionnalités SEO de base</a> - Ajout d'un champ distinct pour la balise titre par page, édition facile et conviviale des mots-clés et des descriptions dans un nouveau module, ainsi qu'un Sitemap Google flexible.
+l'édition facile et conviviale des mots-clés et des descriptions dans un nouveau module ainsi qu'un Google Sitemap flexible.</li></ul><ul id="2e0f1f54-5dfc-4066-a88a-269288fdcc33" class="bulleted-list"><li style="list-style-type:disc"><a href="https://typo3.org/extensions/repository/view/dd_googlesitemap">Google sitemap</a> - Implémentation très performante de Google sitemap qui évite les erreurs typiques des autres extensions similaires.</li></ul><p id="bacf9c05-47d3-4d74-bf29-9505635bc362" class="">
+</p><h3 id="e4ac398e-d90e-41dd-86aa-eca8054f2f28" class="">Plugins WordPress</h3><ul id="aca4810f-2e55-460f-89e9-689decb7f87a" class="bulleted-list"><li style="list-style-type:disc"><a href="https://wordpress.org/plugins/all-in-one-seo-pack/">All in One SEO Pack</a> - Le plugin le plus téléchargé pour WordPress (près de 30 millions de téléchargements).
+de téléchargements). Utilisez All in One SEO Pack pour optimiser automatiquement votre site pour les moteurs de recherche.
+pour les moteurs de recherche.</li></ul><ul id="fa6f345f-3b60-49e1-897a-4247ccbba768" class="bulleted-list"><li style="list-style-type:disc"><a href="https://wordpress.org/plugins/wordpress-seo/">Yoast SEO</a> - Améliorez votre référencement WordPress : Rédigez un meilleur contenu et ayez un site WordPress entièrement optimisé en utilisant le plugin Yoast SEO.</li></ul><ul id="9974e52c-feee-4911-b3ea-9f4cd7dbe7e8" class="bulleted-list"><li style="list-style-type:disc"><a href="https://wordpress.org/plugins/slim-seo/">Slim SEO</a> - Automatise les tâches de référencement pour vous avec un plugin léger de référencement WordPress.</li></ul><p id="f2acac40-4190-4361-9ed2-66fbd8e3a210" class="">
+</p><h2 id="74e9d70a-4e1e-4d05-a632-1db5b05df28d" class="">Livres</h2><ul id="54ee36f7-fd39-40f7-88b3-1b34f77b4c36" class="bulleted-list"><li style="list-style-type:disc"><a href="https://www.amazon.com/Search-Optimization-Internet-Marketing-Strategies/dp/151534567X">Optimisation des moteurs de recherche 2016 : Apprenez le référencement avec des stratégies intelligentes de marketing internet</a> - Apprenez les stratégies de référencement pour vous classer au sommet de Google avec SEO 2016.</li></ul><ul id="775c860e-bdf8-4d84-8cd5-3ef91520db6c" class="bulleted-list"><li style="list-style-type:disc"><a href="https://www.amazon.com/Search-Engine-Optimization-All-Dummies/dp/1118921755">Search Engine Optimization All-in-One For Dummies</a> - Bruce Clay est l'une des personnalités les plus respectées de la communauté SEO. Il donne des cours et des ateliers dans toutes les grandes conférences. Comme le livre
+Art of SEO ", ce livre est en fait assez technique et n'est probablement pas
+Il ne s'agit probablement pas du meilleur guide facile à utiliser, bien qu'il fasse partie de la série " Dummies ".</li></ul><ul id="a20d05a8-d82a-4318-bc08-2607f0fa212d" class="bulleted-list"><li style="list-style-type:disc"><a href="https://www.amazon.com/SEO-2016-Search-Engine-Optimization/dp/1512275069">SEO 2016 : Apprendre l'optimisation des moteurs de recherche</a> - Un guide complet indispensable pour le référencement dans l'environnement de recherche concurrentiel d'aujourd'hui.</li></ul><ul id="930a8070-b479-46a9-962c-fb8723d414c3" class="bulleted-list"><li style="list-style-type:disc"><a href="https://www.amazon.com/SEO-Fitness-Workbook-2016-Optimization/dp/1518748880">SEO Fitness Workbook</a> - Livre étape par étape sur le référencement, en commençant par les objectifs, en passant par le référencement sur la page
+page, comme les balises de page, et se terminant par le référencement hors page, comme le
+la création de liens et les mentions sociales.</li></ul><ul id="a28ad4b6-0ab3-4dd9-8583-8b42bfe6f50d" class="bulleted-list"><li style="list-style-type:disc"><a href="http://shop.oreilly.com/product/9781119129554.do">SEO For Dummies, 6th Edition</a> - Votre guide entièrement mis à jour de l'optimisation des moteurs de recherche.</li></ul><ul id="43f481f8-d522-41e0-96fe-e1d163da5a6f" class="bulleted-list"><li style="list-style-type:disc"><a href="https://www.amazon.com/SEO-Step-Step-Complete-Beginners/dp/1497415020">SEO Step-by-Step - The Complete Beginner's Guide to Getting Traffic from Google</a> - Commence également par les mots-clés et couvre le référencement sur la page et hors page.
+Souligne l'importance de la vitesse, et possède une annexe intéressante avec des ressources, un glossaire et des liens relatifs au référencement.
+un glossaire et des liens.</li></ul><ul id="360b9b3b-d1bb-4025-b177-4fdd78cdf091" class="bulleted-list"><li style="list-style-type:disc"><a href="http://shop.oreilly.com/product/9780596157081.do">SEO Warrior</a> - Techniques essentielles pour accroître la visibilité sur le Web.</li></ul><ul id="5c9ce288-226a-496d-a560-f4cf359e8f8b" class="bulleted-list"><li style="list-style-type:disc"><a href="https://www.amazon.com/SEO-Marketing-Strategies-analytics-optimization-ebook/dp/B01ACB7LQM">SEO : Stratégies de marketing pour dominer la première page</a> - Introduction à Google Analytics, Webmaster, trafic du site Web,
+Adwords, Pay per click, promotion de site Web et optimisation de moteur de recherche.
+de recherche.</li></ul><ul id="7c0ce2c6-a18d-4b6b-a348-1e2baa66df43" class="bulleted-list"><li style="list-style-type:disc"><a href="http://shop.oreilly.com/product/0636920032908.do">The Art of SEO, 3rd Edition</a> - Maîtriser l'optimisation des moteurs de recherche.</li></ul><ul id="5765e4bf-98fb-4309-828a-3aff0be9b1d4" class="bulleted-list"><li style="list-style-type:disc"><a href="https://moz.com/beginners-guide-to-seo">Le guide du débutant en matière de référencement</a> - Nouveau dans le domaine du référencement ? Vous avez besoin de peaufiner vos connaissances ? The Beginner's Guide to SEO a été lu plus de 3 millions de fois et fournit les informations dont vous avez besoin pour vous mettre sur la voie d'un référencement de qualité professionnelle.</li></ul><ul id="08eb3795-4637-4341-974c-a3151d4ca550" class="bulleted-list"><li style="list-style-type:disc"><a href="http://shop.oreilly.com/product/0636920050964.do">Le champ de bataille du référencement</a> - Si vous souhaitez mettre en place un programme de référencement permanent dans le but
+l'augmentation du trafic et de la proéminence dans les recherches.
+pas à pas vous aidera à comprendre la méthodologie du référencement et vous montrera comment
+mettre ces théories en pratique.</li></ul><p id="01914ed3-65eb-4ce0-bb21-dd414b975317" class="">
+</p><h2 id="25188337-3217-44e6-8b22-d8a3b8dfba08" class="">Cours</h2><ul id="863d64b0-a7d9-4c8a-ae49-8eff22d20511" class="bulleted-list"><li style="list-style-type:disc"><a href="https://www.lynda.com/Marketing-Small-Business-Marketing-tutorials/Analyzing-Your-Website-Improve-SEO/82409-2.html">Analyser votre site Web pour améliorer l'optimisation des moteurs de recherche</a> - Explique étape par étape le processus d'examen du contenu et du balisage d'un site Web pour améliorer son classement dans les résultats des moteurs de recherche.
+balisage d'un site Web afin d'améliorer son classement dans les résultats des moteurs de recherche.
+Avec Peter Kent, par Lynda.com.</li></ul><ul id="5ce3105d-770f-4d49-98ec-9f4b0efb795e" class="bulleted-list"><li style="list-style-type:disc"><a href="https://www.clickminded.com/">ClickMinded</a> - ClickMinded est une formation en référencement destinée aux startups qui souhaitent développer leur trafic organique et leurs ventes le plus rapidement possible.</li></ul><ul id="ed5d6796-34ca-49a9-9c64-77ffbc2658f8" class="bulleted-list"><li style="list-style-type:disc"><a href="https://www.shopify.com/videos/ecommerce-seo-101">Série vidéo Ecommerce SEO 101</a> - Série vidéo Ecommerce SEO 101 avec Helen Overland par shopify.</li></ul><ul id="c87d957e-e1cc-48a3-8c37-730d12c8b2d5" class="bulleted-list"><li style="list-style-type:disc"><a href="https://www.lynda.com/HTML-5-tutorials/Improving-SEO-Using-Accessibility-Techniques/89051-6.html">Améliorer le référencement grâce aux techniques d'accessibilité</a> - Rendre les sites Web plus accessibles et plus conviviaux pour les moteurs de recherche grâce à un balisage approprié et au respect des normes Web.
+un balisage approprié et le respect des normes du Web. Avec Morten Rand-Hendriksen
+par Lynda.com.</li></ul><ul id="3b60118a-24fb-4c6a-856b-fda85b9aceb7" class="bulleted-list"><li style="list-style-type:disc"><a href="https://www.lynda.com/Analytics-tutorials/International-SEO-Fundamentals/377449-6.html">Principes de base du référencement international</a> - Attirez les visiteurs internationaux sur vos sites Web grâce à ces conseils de référencement.
+Apprenez à déterminer les marchés cibles et à optimiser les aspects techniques et le contenu de votre site Web pour les pays et les langues du monde entier.
+de votre site Web pour les pays et les langues du monde entier.
+du monde. Avec David Booth, par Lynda.com.</li></ul><ul id="1c1be0ad-9245-4bdc-aec9-5ad3c2176b9e" class="bulleted-list"><li style="list-style-type:disc"><a href="https://www.video2brain.com/en/courses/learning-search-engine-optimization-seo-a-video-introduction">Apprendre l'optimisation des moteurs de recherche (SEO) - Une introduction vidéo</a> - Apprendre l'optimisation des moteurs de recherche (SEO) - Une introduction vidéo avec Matt Bailey par video2brain.</li></ul><ul id="7856e7ef-e5a9-4872-8498-ae487f122a31" class="bulleted-list"><li style="list-style-type:disc"><a href="https://www.video2brain.com/en/courses/learning-web-analytics">Learning Web Analytics</a> - Learning Web Analytics avec Matt Bailey par video2brain.</li></ul><ul id="18c52b05-cb13-43b9-9510-d1033d3127c8" class="bulleted-list"><li style="list-style-type:disc"><a href="http://seoforbeginners.com/">SEO pour les débutants</a> - SEO pour les débutants : Un guide vidéo Introduction.</li></ul><ul id="4a905c99-c6ed-4bd1-8d95-b8be109aec44" class="bulleted-list"><li style="list-style-type:disc"><a href="https://www.lynda.com/Google-Analytics-tutorials/SEO-Ecommerce/386884-2.html">Référencement pour le commerce électronique</a> - Le référencement pour le commerce électronique est différent. Obtenez des stratégies adaptées pour
+l'optimisation d'une boutique en ligne pour améliorer le classement des pages et développer le trafic.
+Avec Steven Harris, par Lynda.com.</li></ul><ul id="a83b58c3-c903-4ac5-b4f1-fb904932c701" class="bulleted-list"><li style="list-style-type:disc"><a href="https://www.lynda.com/Google-Maps-tutorials/SEO-Local-Visibility/178132-2.html">SEO for Local Visibility</a> - Obtenez une visibilité maximale dans les classements de recherche avec ces stratégies de référencement local. Avec Brad Batesole de Lynda.com.</li></ul><ul id="cb1c266e-08db-42b4-9e47-9fe388f36a01" class="bulleted-list"><li style="list-style-type:disc"><a href="https://webdesign.tutsplus.com/courses/seo-for-web-designers">SEO for Web Designers</a> - SEO for Web Designers avec Craig Campbell par TutsPlus.</li></ul><ul id="37e7960b-418e-480c-a037-40751a314efe" class="bulleted-list"><li style="list-style-type:disc"><a href="https://www.lynda.com/Analytics-tutorials/SEO-Fundamentals/187858-2.html">Fondamentaux du référencement</a> - Fondamentaux du référencement avec David Booth par Lynda.com.</li></ul><ul id="8b129ce8-e002-4d75-9353-2024e2b390d1" class="bulleted-list"><li style="list-style-type:disc"><a href="https://www.pluralsight.com/courses/seo-fundamentals">Fondamentaux du référencement</a> - Fondamentaux du référencement avec Paul Wilson par Pluralsight.</li></ul><ul id="15c0bac3-6f60-4c88-955f-a43052b316fb" class="bulleted-list"><li style="list-style-type:disc"><a href="https://www.lynda.com/Buzzstream-tutorials/SEO-Tools-Fundamentals/368917-2.html">SEO Tools Fundamentals</a> - Découvrez les meilleurs outils SEO actuels pour l'optimisation technique, l'optimisation du contenu, l'optimisation hors site et la recherche concurrentielle. Avec Brad Batesole, par Lynda.com.</li></ul><ul id="43ae85e9-ef4a-46e5-81df-cf63f845ec40" class="bulleted-list"><li style="list-style-type:disc"><a href="https://www.udemy.com/whiteboard-seo/">Cours de formation en référencement par Moz</a> - Cours de formation en référencement avec Moz par udemy.</li></ul><ul id="9bbffcad-399f-4405-8538-c3eabe94445e" class="bulleted-list"><li style="list-style-type:disc"><a href="https://www.lynda.com/Business-Online-Marketing-tutorials/SEO-Keyword-Strategy-Depth/147030-6.html">SEO : Stratégie de mots-clés en profondeur</a> - Apprenez à rechercher des mots-clés, à les appliquer à votre site Web et à créer des campagnes publicitaires autour des mots-clés.
+créer des campagnes publicitaires autour des mots-clés. Augmentez le trafic de votre site et
+et comprenez mieux l'intention de vos utilisateurs grâce aux mots-clés. Avec Matt Bailey par
+Lynda.com.</li></ul><ul id="75d501d3-a1da-4ad0-9f10-333b073fc25e" class="bulleted-list"><li style="list-style-type:disc"><a href="https://www.lynda.com/Business-Online-Marketing-tutorials/SEO-Link-Building-Depth/95253-6.html">SEO : Link Building in Depth</a> - Examine l'anatomie d'un lien, comment les liens affectent le classement des pages,
+et les propriétés qui font un excellent lien entrant. Avec Peter Kent
+par Lynda.com.</li></ul><ul id="9888127b-4bc7-4d5f-a492-c835b2cfada6" class="bulleted-list"><li style="list-style-type:disc"><a href="https://www.lynda.com/Marketing-PPC-tutorials/Spying-SEO-Tools/371730-6.html">Espionnage avec les outils de référencement</a> - Apprenez à utiliser les outils et techniques de référencement pour rechercher la concurrence en ligne. Découvrez les mots-clés pour lesquels vos concurrents sont optimisés et
+pour ensuite les surclasser dans les pages de résultats des moteurs de recherche. Avec Anson Alexander
+par Lynda.com.</li></ul><ul id="11b3270b-1081-4e3b-a741-d5b15321b55a" class="bulleted-list"><li style="list-style-type:disc"><a href="https://www.lynda.com/WordPress-tutorials/WordPress-Plugins-SEO/140779-2.html">Plugins WordPress : SEO</a> - Augmentez le nombre de visiteurs sur votre site WordPress en effectuant une optimisation pour les moteurs de recherche, ou SEO, à l'aide de deux puissants plugins.
+moteur de recherche, ou SEO, à l'aide de deux puissants plugins. Avec Morten Rand-Hendriksen par Lynda.com.</li></ul></div></article></body></html>
